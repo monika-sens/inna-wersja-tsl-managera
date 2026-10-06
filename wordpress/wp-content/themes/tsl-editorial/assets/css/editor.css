@@ -1,0 +1,30 @@
+/*
+ * Style treści w edytorze blokowym — redakcja widzi tekst tak jak na stronie.
+ * Fonty są ładowane z theme.json (fontFace).
+ */
+body {
+	font-family: "Newsreader", Georgia, serif;
+	font-size: 20px;
+	line-height: 1.65;
+	color: #141518;
+	background: #F2EEE6;
+}
+h1, h2, h3,
+.editor-post-title__input {
+	font-family: "Newsreader", Georgia, serif;
+	font-weight: 600;
+	color: #141518;
+	line-height: 1.1;
+	letter-spacing: -.015em;
+}
+h4 { font-family: "Instrument Sans", Arial, sans-serif; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; }
+h2 { font-size: 32px; }
+a { color: #141518; text-decoration-color: #D23C1F; }
+blockquote { border-left: 3px solid #D23C1F; padding-left: 24px; font-style: italic; font-size: 24px; }
+table { font-family: "Instrument Sans", Arial, sans-serif; font-size: 15px; }
+.tsl-box { padding: 20px 0; border-top: 3px solid #141518; border-bottom: 1px solid #CFC6B6; }
+.tsl-box-decision { border-top-color: #D23C1F; }
+.tsl-box-summary { padding: 20px 24px; background: #E8E1D4; }
+.tsl-box-title { font-family: "Instrument Sans", Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #A8290F; }
+.tsl-note { font-family: "Instrument Sans", Arial, sans-serif; font-size: 14px; color: #5F5C55; border-top: 1px solid #CFC6B6; padding-top: 12px; }
+.tsl-demo-note { padding: 12px 16px; background: #FBF9F4; border-left: 3px solid #D23C1F; font-family: "Instrument Sans", Arial, sans-serif; font-size: 14px; }

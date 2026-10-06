@@ -1,0 +1,11 @@
+/*
+Theme Name:        TSL Manager Editorial
+Description:       Druga interpretacja portalu TSL Manager — wydanie redakcyjne w duchu magazynu biznesowego: winieta, okładka, spis działów, pas sygnałów RiskBrief, kalendarium. Te same funkcje co motyw „TSL Manager” 0.10.0. Wymaga wtyczki „TSL Manager — model treści” (tsl-core).
+Version:           1.0.0
+Requires at least: 6.5
+Requires PHP:      8.1
+Author:            TSL Manager
+Text Domain:       tsl-editorial
+*/
+
+/* Style motywu: assets/css/main.css */
