@@ -1,0 +1,16 @@
+/* Pasek wersji demonstracyjnej (tylko w eksporcie statycznym). */
+.demo-bar {
+	position: fixed; left: 12px; bottom: 12px; z-index: 300;
+	display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px;
+	max-width: min(560px, calc(100% - 24px)); padding: 10px 14px;
+	background: #141518; color: #F2EEE6; border-top: 3px solid #D23C1F;
+	box-shadow: 0 16px 40px -18px rgba(20, 21, 24, .6);
+	font: 500 13px/1.45 "Instrument Sans", Arial, sans-serif;
+}
+.demo-bar[hidden] { display: none; }
+.demo-bar strong { margin-right: 6px; font-weight: 700; }
+.demo-bar-links { display: flex; align-items: center; gap: 12px; }
+.demo-bar a { color: #FF6A4D; }
+.demo-bar button { padding: 2px 10px; background: none; border: 1px solid rgba(242, 238, 230, .5); color: inherit; font: inherit; cursor: pointer; }
+.demo-bar button:hover { border-color: #F2EEE6; }
+@media print { .demo-bar { display: none !important; } }

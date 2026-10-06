@@ -57,13 +57,7 @@ $selects = array(
 <div class="wrap page-body page-body-narrow" data-search-term="<?php echo esc_attr( get_search_query() ); ?>" data-search-count="<?php echo esc_attr( (int) $wp_query->found_posts ); ?>">
 	<?php if ( have_posts() ) : ?>
 		<p class="result-count" role="status">
-			<?php
-			printf(
-				/* translators: %d: liczba wyników */
-				esc_html( _n( 'Znaleziono %d materiał', 'Znaleziono %d materiałów', (int) $wp_query->found_posts, 'tsl-editorial' ) ),
-				(int) $wp_query->found_posts
-			);
-			?>
+			<?php echo esc_html( 'Znaleziono ' . (int) $wp_query->found_posts . ' ' . tsl_plural( $wp_query->found_posts, 'materiał', 'materiały', 'materiałów' ) ); ?>
 		</p>
 		<h2 class="screen-reader-text">Wyniki wyszukiwania</h2>
 		<div class="post-list">

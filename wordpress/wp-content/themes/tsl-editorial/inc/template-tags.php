@@ -406,6 +406,22 @@ function tsl_media( $post = null, $size = 'tsl-card', $loading = 'lazy', $sizes 
 }
 
 /**
+ * Polska odmiana liczebnika: 1 materiał, 2 materiały, 5 materiałów.
+ *
+ * @param int    $n    Liczba.
+ * @param string $one  Forma dla 1.
+ * @param string $few  Forma dla 2–4 (22–24…).
+ * @param string $many Forma dla pozostałych.
+ */
+function tsl_plural( $n, $one, $few, $many ) {
+	$n = abs( (int) $n );
+	if ( 1 === $n ) {
+		return $one;
+	}
+	return ( $n % 10 >= 2 && $n % 10 <= 4 && ( $n % 100 < 12 || $n % 100 > 14 ) ) ? $few : $many;
+}
+
+/**
  * Dzisiejsza data wydania w winiecie, np. „wtorek, 6 października 2026”.
  */
 function tsl_edition_date() {

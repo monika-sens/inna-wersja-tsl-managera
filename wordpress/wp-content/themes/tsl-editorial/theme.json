@@ -13,13 +13,41 @@
 			"defaultPalette": false,
 			"defaultGradients": false,
 			"palette": [
-				{ "slug": "druk", "name": "Druk", "color": "#141518" },
-				{ "slug": "papier", "name": "Papier", "color": "#F2EEE6" },
-				{ "slug": "kamien", "name": "Kamień", "color": "#E8E1D4" },
-				{ "slug": "arkusz", "name": "Arkusz", "color": "#FBF9F4" },
-				{ "slug": "cynober", "name": "Cynober (sygnał)", "color": "#D23C1F" },
-				{ "slug": "cynober-tekst", "name": "Cynober (tekst)", "color": "#A8290F" },
-				{ "slug": "szary", "name": "Szary", "color": "#5F5C55" }
+				{
+					"slug": "druk",
+					"name": "Druk",
+					"color": "#141518"
+				},
+				{
+					"slug": "papier",
+					"name": "Papier",
+					"color": "#F2EEE6"
+				},
+				{
+					"slug": "kamien",
+					"name": "Kamień",
+					"color": "#E8E1D4"
+				},
+				{
+					"slug": "arkusz",
+					"name": "Arkusz",
+					"color": "#FBF9F4"
+				},
+				{
+					"slug": "cynober",
+					"name": "Cynober (sygnał)",
+					"color": "#D23C1F"
+				},
+				{
+					"slug": "cynober-tekst",
+					"name": "Cynober (tekst)",
+					"color": "#A8290F"
+				},
+				{
+					"slug": "szary",
+					"name": "Szary",
+					"color": "#5F5C55"
+				}
 			]
 		},
 		"typography": {
@@ -31,8 +59,24 @@
 					"name": "Newsreader",
 					"fontFamily": "\"Newsreader\", Georgia, serif",
 					"fontFace": [
-						{ "fontFamily": "Newsreader", "fontStyle": "normal", "fontWeight": "200 800", "src": [ "file:./assets/fonts/newsreader-latin-wght-normal.woff2", "file:./assets/fonts/newsreader-latin-ext-wght-normal.woff2" ] },
-						{ "fontFamily": "Newsreader", "fontStyle": "italic", "fontWeight": "200 800", "src": [ "file:./assets/fonts/newsreader-latin-wght-italic.woff2", "file:./assets/fonts/newsreader-latin-ext-wght-italic.woff2" ] }
+						{
+							"fontFamily": "Newsreader",
+							"fontStyle": "normal",
+							"fontWeight": "200 800",
+							"src": [
+								"file:./assets/fonts/newsreader-latin-wght-normal.woff2",
+								"file:./assets/fonts/newsreader-latin-ext-wght-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Newsreader",
+							"fontStyle": "italic",
+							"fontWeight": "200 800",
+							"src": [
+								"file:./assets/fonts/newsreader-latin-wght-italic.woff2",
+								"file:./assets/fonts/newsreader-latin-ext-wght-italic.woff2"
+							]
+						}
 					]
 				},
 				{
@@ -40,28 +84,49 @@
 					"name": "Instrument Sans",
 					"fontFamily": "\"Instrument Sans\", \"Helvetica Neue\", Arial, sans-serif",
 					"fontFace": [
-						{ "fontFamily": "Instrument Sans", "fontStyle": "normal", "fontWeight": "400 700", "src": [ "file:./assets/fonts/instrument-sans-latin-wght-normal.woff2", "file:./assets/fonts/instrument-sans-latin-ext-wght-normal.woff2" ] }
+						{
+							"fontFamily": "Instrument Sans",
+							"fontStyle": "normal",
+							"fontWeight": "400 700",
+							"src": [
+								"file:./assets/fonts/instrument-sans-latin-wght-normal.woff2",
+								"file:./assets/fonts/instrument-sans-latin-ext-wght-normal.woff2"
+							]
+						}
 					]
 				}
 			],
 			"fontSizes": [
-				{ "slug": "small", "name": "Mały", "size": "15px" },
-				{ "slug": "medium", "name": "Tekst", "size": "20px" },
-				{ "slug": "large", "name": "Śródtytuł", "size": "30px" },
-				{ "slug": "x-large", "name": "Tytuł", "size": "44px" }
+				{
+					"slug": "small",
+					"name": "Mały",
+					"size": "15px"
+				},
+				{
+					"slug": "medium",
+					"name": "Tekst",
+					"size": "20px"
+				},
+				{
+					"slug": "large",
+					"name": "Śródtytuł",
+					"size": "30px"
+				},
+				{
+					"slug": "x-large",
+					"name": "Tytuł",
+					"size": "44px"
+				}
 			]
 		},
 		"spacing": {
 			"customSpacingSize": false,
-			"units": [ "px", "em", "rem", "%" ]
-		}
-	},
-	"styles": {
-		"color": { "background": "#F2EEE6", "text": "#141518" },
-		"typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "fontSize": "20px", "lineHeight": "1.65" },
-		"elements": {
-			"heading": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "fontWeight": "600", "lineHeight": "1.12" } },
-			"link": { "color": { "text": "#141518" } }
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"%"
+			]
 		}
 	}
 }

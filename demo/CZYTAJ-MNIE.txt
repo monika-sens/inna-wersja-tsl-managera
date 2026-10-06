@@ -1,0 +1,39 @@
+TSL MANAGER EDITORIAL — LEKKA WERSJA DEMO
+==========================================
+
+Druga koncepcja wizualna serwisu TSL Manager („wydanie redakcyjne”).
+Te same funkcje co serwis TSL Manager 0.10.0, zupełnie inny projekt.
+
+JAK OTWORZYĆ
+1) Rozpakuj folder (jeśli dostałeś go jako ZIP).
+2) Kliknij dwukrotnie plik index.html — otworzy się strona startowa demo.
+3) Kliknij „Otwórz serwis” albo wybierz punkt ze ścieżki prezentacji.
+
+Nie trzeba internetu, serwera ani instalowania programów.
+Działa w Chrome, Edge, Firefox i Safari, także na telefonie i tablecie.
+
+Opcjonalnie (np. do pokazu na projektorze z innego komputera) można użyć
+prostego serwera: w tym folderze uruchom
+    python3 -m http.server 8000
+i otwórz http://localhost:8000/
+
+CO DZIAŁA
+- strona główna, sześć działów i wszystkie obszary, 36 artykułów redakcji,
+  RiskBrief TSL, narzędzia (checklisty z zapisem w przeglądarce i wydrukiem),
+  raport, wydarzenia, eksperci, partnerzy, newsletter, kontakt, strony projektu;
+- nawigacja: panele działów, menu na telefonie, wyszukiwarka (dowolne hasło,
+  filtry: filar, format, rodzaj transportu), filtry w kolekcjach i działach;
+- formularze sprawdzają pola jak w serwisie, ale niczego nie wysyłają —
+  pokazują komunikat wersji demonstracyjnej.
+
+CO JEST DEMONSTRACYJNE
+- eksperci, partnerzy, sygnały RiskBrief, raport i wydarzenia to materiały
+  przykładowe (oznaczone w treści);
+- strony prawne są w przygotowaniu — linki prowadzą do strony
+  „Ten widok nie jest częścią wersji demonstracyjnej”;
+- kalkulator kosztu kilometra jest „w przygotowaniu” (jak w serwisie 0.10.0);
+  kalkulator e-TOLL prowadzi do oficjalnego serwisu (wymaga internetu);
+- data w winiecie i daty materiałów pochodzą z dnia przygotowania demo.
+
+Pełna wersja WordPress (motyw + wtyczka) jest w folderze „wordpress”
+repozytorium projektu.

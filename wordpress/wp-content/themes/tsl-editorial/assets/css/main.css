@@ -147,6 +147,8 @@ button { cursor: pointer; }
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
 .wrap-wide { width: 100%; max-width: 1480px; margin-inline: auto; padding-inline: var(--gutter); }
 
+[hidden] { display: none !important; }
+
 .site-main { display: block; outline: none; }
 .site-main:focus { outline: none; }
 
@@ -254,7 +256,8 @@ button { cursor: pointer; }
 .crumbs li + li::before { content: "/"; margin: 0 9px; color: var(--rule); }
 .crumbs a { text-decoration: none; }
 .crumbs a:hover { text-decoration: underline; color: var(--ink); }
-.crumbs [aria-current] { color: var(--ink); max-width: 46ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crumbs { min-width: 0; }
+.crumbs [aria-current] { color: var(--ink); max-width: min(46ch, 100%); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---------- Pasek wydania ---------- */
 
@@ -808,7 +811,7 @@ body.nav-open { overflow: hidden; }
 .dept-main .filter-tabs { margin: 0 0 32px; border-top: 0; padding-top: 0; }
 
 .page-body { padding-block: clamp(32px, 4vw, 56px) var(--section); }
-.page-body-narrow { max-width: 1040px; }
+.page-body-narrow > * { max-width: 1040px; }
 .list-heading { margin: 40px 0 18px; font-size: clamp(26px, 2.4vw, 34px); }
 .result-count { margin-bottom: 18px; font: 600 13px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 
@@ -887,6 +890,7 @@ a.page-numbers:hover { border-color: var(--ink); }
 
 .entry-head { padding-block: clamp(28px, 3.4vw, 44px) clamp(28px, 3.4vw, 44px); }
 .entry-head-inner { display: grid; gap: 18px; }
+.entry-head-inner > * { min-width: 0; }
 .entry-head .crumbs { margin-bottom: clamp(12px, 2vw, 24px); }
 .entry-title { max-width: 20ch; font-size: clamp(36px, 5.4vw, 80px); line-height: 1; letter-spacing: -.03em; }
 .entry-standfirst { max-width: 58ch; font: italic 400 clamp(19px, 1.7vw, 24px)/1.45 var(--serif); color: var(--ink-2); }
@@ -1273,9 +1277,12 @@ a.page-numbers:hover { border-color: var(--ink); }
 	.signals-list:has(> :nth-child(5)) .signal:nth-child(n+4) { border-top: 1px solid var(--rule-ink); }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1379px) {
 	.section-btn .label-full { display: none; }
 	.section-btn .label-short { display: inline; }
+}
+
+@media (max-width: 1240px) {
 	.mh-tagline { display: none; }
 	.pillar-row { grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1.3fr) 36px; }
 	.pi-subs { grid-column: 2 / 4; }

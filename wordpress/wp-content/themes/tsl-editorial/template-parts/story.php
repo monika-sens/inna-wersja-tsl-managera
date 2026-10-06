@@ -19,11 +19,18 @@ $num      = $args['num'] ?? '';
 $is_rb    = 'riskbrief' === $story->post_type;
 $with_img = in_array( $variant, array( 'lead', 'medium', 'river' ), true ) && ( has_post_thumbnail( $story ) || 'lead' === $variant );
 $formats  = get_the_terms( $story, 'tsl_format' );
+$modes    = get_the_terms( $story, 'tsl_rodzaj_transportu' );
+$pillar   = function_exists( 'tsl_get_pillar' ) ? tsl_get_pillar( $story ) : null;
+$data     = array(
+	'format'    => ( $formats && ! is_wp_error( $formats ) ) ? implode( ' ', wp_list_pluck( $formats, 'slug' ) ) : '',
+	'pillar'    => $pillar ? $pillar->slug : '',
+	'transport' => ( $modes && ! is_wp_error( $modes ) ) ? implode( ' ', wp_list_pluck( $modes, 'slug' ) ) : '',
+);
 $classes  = 'story story-' . $variant . ' story-type-' . $story->post_type . ( $with_img ? ' has-media' : '' );
 $sizes    = $args['sizes'] ?? ( 'lead' === $variant ? '(max-width: 900px) 100vw, 60vw' : ( 'river' === $variant ? '240px' : '(max-width: 600px) 100vw, 33vw' ) );
 $size     = 'lead' === $variant ? 'tsl-hero' : 'tsl-card';
 ?>
-<article class="<?php echo esc_attr( $classes ); ?>"<?php echo ( $formats && ! is_wp_error( $formats ) ) ? ' data-format="' . esc_attr( implode( ' ', wp_list_pluck( $formats, 'slug' ) ) ) . '"' : ''; ?>>
+<article class="<?php echo esc_attr( $classes ); ?>"<?php foreach ( array_filter( $data ) as $key => $value ) { echo ' data-' . esc_attr( $key ) . '="' . esc_attr( $value ) . '"'; } ?>>
 	<?php if ( $with_img ) : ?>
 		<a class="story-media" href="<?php echo esc_url( get_permalink( $story ) ); ?>" tabindex="-1" aria-hidden="true"><?php echo tsl_media( $story, $size, 'lazy', $sizes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 	<?php endif; ?>

@@ -79,6 +79,20 @@ add_action(
 	0
 );
 
+/**
+ * Bez skryptu i stylów emoji WordPressa (zbędne zapytanie do zewnętrznego CDN;
+ * przeglądarki wyświetlają emoji same).
+ */
+add_action(
+	'init',
+	function () {
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	}
+);
+
 add_filter(
 	'excerpt_length',
 	function () {
