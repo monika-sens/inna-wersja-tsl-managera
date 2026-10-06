@@ -58,7 +58,7 @@ Oznaczenia: **Z** — zachowana · **ZI** — zachowana, przedstawiona inaczej �
 | F-34 | Narzędzie | Z | Wersja, data, „Jak korzystać”, pobranie / formularz po e-mailu, zastrzeżenie, powiązane |
 | F-35 | Checklista | Z | Odhaczanie, licznik (duże cyfry), pasek, punkty krytyczne + ostrzeżenie, uwagi, localStorage, wyczyść, druk samej checklisty (test automatyczny) |
 | F-36 | e-TOLL | Z | Widżet wtyczki ostylowany w nowym języku |
-| F-37 | Kalkulator kosztu km | U | W 0.10.0 bez Cost Calculator Builder kalkulator nie wyświetla się wcale. Motyw rysuje go z tej samej definicji (pola, limity, wzory) — wyniki identyczne (4,94 / 6,39 zł; przebieg 0 → „—”). Z CCB działa kalkulator wtyczki. Treść narzędzia w bazie nadal opisuje je jako „w przygotowaniu” — **decyzja redakcji**, czy wstawić `[tsl_kalkulator klucz="koszt-kilometra"]` |
+| F-37 | Kalkulator kosztu km | U | W 0.10.0 bez Cost Calculator Builder kalkulator nie wyświetla się wcale. Motyw rysuje go z tej samej definicji (pola, limity, wzory) — wyniki identyczne (4,94 / 6,39 zł; przebieg 0 → „—”). Z CCB działa kalkulator wtyczki. **Decyzja właścicielki (6.10.2026): kalkulator nie jest publikowany** — narzędzie zostaje „w przygotowaniu”, treść w bazie bez zmian; mechanizm w motywie jest nieaktywny, dopóki redakcja nie wstawi kodu `[tsl_kalkulator]` |
 | F-38 | Raport | Z | Wnioski, pobranie, metodologia, autorzy, powiązane |
 | F-39 | Wydarzenie | ZI | Fakty w pasku metadanych, agenda, prelegenci, rejestracja / nagranie / materiały; obsługa TEC zachowana |
 | F-40 | Ekspert | Z | |
@@ -123,7 +123,7 @@ Oznaczenia: **Z** — zachowana · **ZI** — zachowana, przedstawiona inaczej �
 
 ## Wymaga uwagi (decyzje poza kodem)
 
-1. **Kalkulator kosztu kilometra** — technicznie działa także bez CCB; redakcja decyduje, czy go opublikować (F-37).
+1. **Kalkulator kosztu kilometra** — zdecydowano: **nie publikować** (zostaje „w przygotowaniu”, jak w 0.10.0). Mechanizm w motywie czeka nieaktywny (F-37).
 2. **Moduł „Transport i operacje”** — pojawi się po przypisaniu rodzaju transportu w artykułach (jak w 0.10.0).
 3. **Ilustracje** — duże pliki PNG w Mediach; warto je skonwertować przed startem (wydajność).
 4. **Logo** — znak słowny jest roboczy, jak logo w 0.10.0; po wyborze finalnego znaku podmiana w `tsl_logo()`.
